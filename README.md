@@ -43,3 +43,21 @@ different format, I included a small program named OutputToCSV.py, where you can
 file. 
 
 Have fun matching patients to trials!
+
+
+
+
+
+Future outlook:
+
+In terms of the MVP, the codebase here has already been written. It is usable already, but it would be difficult for
+clients without experience in github, bash, and a CLI interface in general to use it properly. After spending another
+day developing a simple UI/UX using React, JS, and HTML/CSS, this would be ready as a MVP. 
+
+Obviously, this code can be improved greatly, especially with the implementation of our very own AI model. In fact, we can
+use the output files created by these already-existing programs to use as labelled datasets for a new model. Outside of 
+training the model itself, which will greatly enhance speed and accuracy, we can also make a better UI/UX, building an 
+entire website for this matching algorithm. In terms of outside applications, this could be used for many other fields 
+outside of just clinical trials; we could also use this for organ donor matches and blood transfusion matches amongst
+many other great practical uses. Overall, I thought this coding assignment was both challenging and fruitful, and I would 
+love to explore this area more through a summer experience at TurmerikAI. 
