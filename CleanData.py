@@ -40,6 +40,22 @@ with open(input_file, mode="r", newline="", encoding="utf-8") as infile:
                 array_2d[i] = [row[0], combined_column, m, o, 0, 0, 0, 0]  # Write to the output file
                 target_value.append(row[0])
 
+with open('immunizations.csv', mode="r", newline="", encoding="utf-8") as infile:
+
+    reader = csv.reader(infile, skipinitialspace=True)  # Ignore spaces after commas
+    
+    for i, row in enumerate(reader):
+        if i >= 5:  # Stop after i
+            break
+
+        # Replace empty values with "0"
+        row = [col.strip() if col.strip() else '0' for col in row]  # If value is empty, set to "0"
+
+        if any(row):  # Ensure row is not completely empty
+            for j in range(len(target_value)):                
+                array_2d[i][4] = row[4]  # Write to the output file
+        
+
 with open('medications.csv', mode="r", newline="", encoding="utf-8") as infile:
 
     reader = csv.reader(infile, skipinitialspace=True)  # Ignore spaces after commas
@@ -72,10 +88,13 @@ with open('conditions.csv', mode="r", newline="", encoding="utf-8") as infile:
             for j in range(len(target_value)):
                 array_2d[i][6] = row[5]  # Write to the output file
 
-with open('careplans.csv', mode="r", newline="", encoding="utf-8") as infile:
+with open('careplans.csv', mode="r", newline="", encoding="utf-8") as infile, \
+     open(output_file, mode="w", newline="", encoding="utf-8") as outfile:
 
     reader = csv.reader(infile, skipinitialspace=True)  # Ignore spaces after commas
-    
+    writer = csv.writer(outfile)
+    header = ['patient_id', 'name', 'race', 'gender', 'immunizations', 'medications', 'medical_conditions', 'other_medical_conditions']
+    writer.writerow(header)
 
     for i, row in enumerate(reader):
         if i >= 5:  # Stop after i rows
@@ -87,26 +106,7 @@ with open('careplans.csv', mode="r", newline="", encoding="utf-8") as infile:
         if any(row):  # Ensure row is not completely empty
             for j in range(len(target_value)):
                 array_2d[i][7] = row[8]  # Write to the output file
-
-with open('immunizations.csv', mode="r", newline="", encoding="utf-8") as infile, \
-     open(output_file, mode="w", newline="", encoding="utf-8") as outfile:
-
-    reader = csv.reader(infile, skipinitialspace=True)  # Ignore spaces after commas
-    writer = csv.writer(outfile)
-    header = ['patient_id', 'name', 'race', 'gender', 'immunizations', 'medications', 'medical_conditions', 'other_medical_conditions']
-    writer.writerow(header)
-    for i, row in enumerate(reader):
-        if i >= 5:  # Stop after i
-            break
-
-        # Replace empty values with "0"
-        row = [col.strip() if col.strip() else '0' for col in row]  # If value is empty, set to "0"
-
-        if any(row):  # Ensure row is not completely empty
-            for j in range(len(target_value)):                
-                array_2d[i][4] = row[4]  # Write to the output file
         writer.writerow(array_2d[i])
-
 
 print(f"Processed and saved to {output_file}")
 
