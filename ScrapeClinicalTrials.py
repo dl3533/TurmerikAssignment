@@ -1,11 +1,10 @@
 from playwright.sync_api import sync_playwright
 import csv
-import time
 
 def scrape_clinical_trials():
 
     # Remove or edit this line when running on your own machine as this path is specific to my machine
-    file_path = r'C:\Users\david\TurmerikAssignment\clinical_trials.csv'
+    file_path = r'C:\Users\david\TurmerikCodingAssignment\clinical_trials.csv'
 
 
     # Open a CSV file to save the trial names

@@ -1,11 +1,10 @@
 import csv
 import openai
-import os
-import json
+
 import pandas as pd
 
 # Ensure OpenAI API key is set
-client = openai.OpenAI(api_key="YOUR-OWN_KEY")
+client = openai.OpenAI(api_key="YOUR-OWN-KEY")
 def check_eligibility(patient, trial):
     """
     Compare a patient's data with trial requirements using OpenAI API.
