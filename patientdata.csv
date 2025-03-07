@@ -1,0 +1,6 @@
+patient_id,name,race,gender,immunizations,medications,medical_conditions,other_medical_conditions
+00200d7d-8745-42cc-ac66-d7c16403a605,Dell Schoen,white,F,Influenza  seasonal  injectable  preservative free,Levonorgestrel 0.00354 MG/HR [Norplant],Acute viral pharyngitis (disorder),Atopic dermatitis
+002d6c37-1862-47fc-9de9-eb89ef5387b4,Garfield Rutherford,white,F,Td (adult) preservative free,Jolivette 28 Day Pack,Viral sinusitis (disorder),Atopic dermatitis
+00d27ddc-57c7-4592-85fe-cd962599c8b2,Reggie Rau,white,M,Influenza  seasonal  injectable  preservative free,120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler,Sinusitis (disorder),0
+012dbda1-5a23-4b43-a373-902aedee9e88,Retha Jaskolski,white,M,Influenza  seasonal  injectable  preservative free,200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler,Viral sinusitis (disorder),0
+02380cc2-86e1-4961-82f1-703075d4bc86,Mara Denesik,white,F,Influenza  seasonal  injectable  preservative free,Chlorpheniramine 2 MG Chewable Tablet,Acute viral pharyngitis (disorder),0
